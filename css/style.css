@@ -12,6 +12,17 @@ main {justify-content: center; padding: 1rem; }
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+/* แอนิเมชั่นเมื่อวางเมาส์*/
+.product-card:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
+
+#product-list {
+    display: flex; flex-wrap: wrap;
+}
 .product-card img { max-width: 100%; height: auto; }
 .product-card h3 { font-size: 1.1em; }
 .product-card p { color: #888; }
