@@ -3,12 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     let allProducts = [];
 
-    // Fetch products from JSON
+// แสดง loader ก่อนเริ่มโหลดข้อมูล
+    loader.style.display = 'block';
+
+    // Fetch products
     fetch('js/products.json')
         .then(response => response.json())
         .then(data => {
             allProducts = data;
             displayProducts(allProducts);
+        })
+        .finally(() => {
+            loader.style.display = 'none';
         });
 
     function displayProducts(products) {
